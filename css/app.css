@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+  background-color: #f9f9f9;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+  .wrapper {
+    background-color: #134E5E;
+    /*margin: 0 auto 0 auto;*/
+    position: relative;
+    text-align: center;
+    color: #111;
+    height: 320px;
+    width: 380px;
+    border-radius: 5px;
+    padding-top: 70px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+
+  }
+
+  .profile {
+   height: 100px;
+   width: 100px;
+   background-color: #fff;
+   margin: auto;
+   border-radius: 50%;
+   margin-bottom: 25px;
+   border: 3px solid #fff;
+
+  }
+
+  .profile-feedback {
+    color: #fff;
+    background-image: url('../img/warning.png');
+    background-repeat: no-repeat;
+    background-position: 55px 10px;
+    padding: 7px 0 0 22px;
+    font-size: 13px;
+  }
+
+  .profile-feedback.warning {
+    background-image: url('../img/warning.png');
+  }
+
+  .hide {
+   display: none;
+  }
+
+  .show {
+   display: block;
+  }
+
+   .profile .image img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+   }
+
+   .profile .text {
+    font-size: 47px;
+    padding-top: 15px
+   }
+
+   .profile-input {
+     margin-bottom: 20px;
+   }
+
+  .profile-input input{
+   padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 3px;
+    border: none;
+    font-size: 15px;
+    width: 250px;
+    height: 35px;
+  }
+
+  .profile-input input:focus {
+    outline: none;
+  }
+
+  .profile-button button {
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 3px;
+    border: none;
+    background-color: #71B280;
+    color: #fff;
+    font-size: 15px
+  }
+
+ .profile-footer {
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   text-align: center;
+   left: 0;
+   color: #fff;
+   font-size: 12px;
+ }
+
+ .profile-footer a {
+   color: #fff;
+ }
+
+
+ .sidebar-wrapper {
+   height: 320px;
+   width: 100px;
+   background: #134E5E;
+   position: absolute;
+   left: 75%;
+   top: 50%;
+   right: 0;
+   transform: translate(-50%, -50%);
+   padding: 34px 0px;
+   border-radius: 5px;
+ }
+
+ .initials-holder {
+  height: 50px;
+  width: 50px;
+  color: #111;
+  background: #fff;
+  border-radius: 50%;
+  margin: auto;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 50px;
+ }

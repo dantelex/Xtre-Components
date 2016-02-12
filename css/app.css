@@ -33,6 +33,7 @@ body {
    border-radius: 50%;
    margin-bottom: 25px;
    border: 3px solid #fff;
+   color: #fff;
 
   }
 
@@ -98,6 +99,10 @@ body {
     font-size: 15px
   }
 
+  .profile-button button:focus {
+   outline: none;
+  }
+
  .profile-footer {
    position: fixed;
    bottom: 0;
@@ -129,7 +134,7 @@ body {
  .initials-holder {
   height: 50px;
   width: 50px;
-  color: #111;
+  color: #fff;
   background: #fff;
   border-radius: 50%;
   margin: auto;

@@ -1,5 +1,7 @@
 var colours = ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d"];
 
+// var random = Math.floor(Math.random()*16777215).toString(16);
+
 
 var wrapper = $('.wrapper'), //  Declare variables
     button = '.submit-btn',
@@ -16,17 +18,22 @@ var wrapper = $('.wrapper'), //  Declare variables
     initials; // Store the initials
 
 
-
+//Event added to the submit button
+//Handles validation on click and if all are true it creates the initials
 wrapper.off('click', button).on('click', button, function(e) {
   e.preventDefault();
-  checkInput(); //call the function on click
+  checkInput(); // call the function on click
 });
 
+//Event added to the input on focus
+//Clears the value in the input on focus
 wrapper.off('focus', profileInput).on('focus', profileInput, function(e) {
   e.preventDefault();
   checkValOnFocus(); //call the function on focus
 });
 
+//Even added to the input on keyup
+//Handles validation on keyup
 wrapper.off('keyup', profileInput).on('keyup', profileInput, function(e) {
   e.preventDefault();
   checkValOnKeyUp(); //call the function on keyup
@@ -51,8 +58,8 @@ function intialsAvatar() { //Declare function
   $(profileImgContainer).addClass('hide'); //Hide the image
   $(profileTextContainer).removeClass('hide').addClass('show').text(initials); //Show the initials
   $(profile).css('background-color', colours[coloursIndex]); //Change the background-color
-  $(profileTextContainer).attr('data-name', initials); //Set the data attribute to the intitals value
-  $(profileImg).attr('data-name', initials); //Set the data attribute to the intitals value
+  $(profileTextContainer).attr('data-name', initials); //Set the data attribute in the text div to the intitals value
+  $(profileImg).attr('data-name', initials); //Set the data attribute in the img to the intitals value
 
 }
 
@@ -76,10 +83,7 @@ function checkInput() { // Declare function
      intialsAvatar(); // call the initials function
      postInitialsAndBackColor(); // post the the initials to the side bar
      $(profileInputMsg).text('');   // Clear the error message
-
-
   }
-
 
 }
 
@@ -90,7 +94,7 @@ function checkValOnFocus() { // Declare function
 
   if(letters == true) { //if it's not a string
     $(profileInput).val(''); // clear the value
-
+    // $(profileInputMsg).text(''); // clear the error message
   }
 
 }
@@ -114,12 +118,12 @@ function postInitialsAndBackColor() {
 
   var getText = $(profileTextContainer).text(), //Get the initials
       getBackgroundColor = $(profile).css("background-color"), // Get the background-color
-      contentHolder = $('<div>').addClass('initials-holder').attr('data-name', initials).text(getText).css('background-color', getBackgroundColor); //create the div, add the class, add the initials and the background-color
+      contentHolder = $('<div>').addClass('initials-holder').attr('data-name', initials).text(getText).css('background-color', getBackgroundColor); //create the html, add the class, add the initials and the background-color
 
-  if($(initialsHolder).length < 5) { // Check if the divs with the initials are less than 5
+  if($(initialsHolder).length < 5) { // Check if the divs created with the initials are less than 5
    $(sideBar).prepend(contentHolder); // Add the div to the sidebar
   }
-  else if ($(initialsHolder).length >= 5) { // Check if the divs with the initials are great than or equal to 5
+  else if ($(initialsHolder).length >= 5) { // Check if the divs created with the initials are great than or equal to 5
    $(sideBar).prepend(contentHolder); // Add the div to the sidebar
    $(initialsLastDiv).remove(); // Remove the last div on the sidebar
   }

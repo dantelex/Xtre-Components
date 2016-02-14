@@ -19,7 +19,7 @@ body {
     padding-top: 70px;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 45%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
 
@@ -32,10 +32,11 @@ body {
    margin: auto;
    border-radius: 50%;
    margin-bottom: 25px;
-   border: 3px solid #fff;
+   border: 3px solid;
    color: #fff;
 
   }
+
 
   .profile-feedback {
     color: #fff;
@@ -119,8 +120,8 @@ body {
 
 
  .sidebar-wrapper {
-   height: 320px;
-   width: 100px;
+   height: 322px;
+   width: 320px;
    background: #134E5E;
    position: absolute;
    left: 75%;
@@ -129,17 +130,26 @@ body {
    transform: translate(-50%, -50%);
    padding: 34px 0px;
    border-radius: 5px;
+   color: #fff;
  }
 
- .initials-holder {
+ .js-initials-holder {
   height: 50px;
   width: 50px;
-  color: #fff;
-  background: #fff;
+  /*background: #fff;*/
   border-radius: 50%;
-  margin: auto;
-  border: 3px solid #fff;
+  /*margin: auto;*/
+  margin-left: 35px;
+  border: 3px solid;
   margin-bottom: 10px;
   text-align: center;
   line-height: 50px;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 20px;
+ }
+
+
+ .js-sidebar-inner-wrapper {
+   margin-bottom: 10px;
  }

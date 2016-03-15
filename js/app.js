@@ -39,27 +39,37 @@ wrapper.off('keyup', profileInput).on('keyup', profileInput, function(e) {
   checkValOnKeyUp(); //call the function on keyup
 });
 
+function hashCode (msg) {
+    var hash = 0,
+                i, chr, len;
+    if (msg.length === 0) return hash;
+    for (i = 0, len = msg.length; i < len; i++) {
+                chr = msg.charCodeAt(i);
+                hash = ((hash << 5) - hash) + chr;
+                hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+}
 
+function getInitials (msg, content) {
+    if (typeof content == "undefined") {
+                var content = true;
+    }
+    var initials = msg.replace(/[^a-zA-Z- ]/g, "").match(/\b\w/g);
+    if (content) {
+                return initials.join('').substring(0, 2);
+    }
+    return initials.substring(0, 2);
+}
 
-function intialsAvatar() { //Declare function
+function initialsAvatar() { //Declare function
 
-  var profileNameVal = $(profileInput).val(), // Get the value in the input
-      initials,
-      coloursIndex = Math.floor(Math.random()*colours.length); // Get a random color from the color set
-
-  if((/ /).test(profileNameVal)) // check if there are two names e.g "Dante Lex"
-  {
-   profileNameVal = profileNameVal.split(" "); //Split the names into an array
-   initials = profileNameVal[0].charAt(0).toUpperCase() + profileNameVal[1].charAt(0).toUpperCase(); // Get the first letter of the first name in the first array and the first lettter of the first name in the second array
-  }
-  else {
-   initials = profileNameVal.charAt(0).toUpperCase() // Get the first letter of the name if it's only one name
-  }
+  var initials = getInitials($(profileInput).val()), // Get the initials value in the input
+      coloursIndex = Math.floor(Math.abs(hashCode($(profileInput).val()))%colours.length); // Get a random color from the color set
 
   $(profileImgContainer).addClass('hide'); //Hide the image
   $(profileTextContainer).removeClass('hide').text(initials); //Show the initials
   $(profile).css('background-color', colours[coloursIndex]); //Change the background-color
-
 }
 
 function checkInput() { // Declare function
@@ -79,7 +89,7 @@ function checkInput() { // Declare function
      break;
 
    default:
-     intialsAvatar(); // call the initials function
+     initialsAvatar(); // call the initials function
      postInitialsAndBackColor(); // post the the initials to the side bar
      $(profileInputMsg).text('');   // Clear the error message
   }
@@ -135,38 +145,27 @@ function postInitialsAndBackColor() {
 }
 
 
-////////////////////////////////////////////////////////////////////////
-// Alternative method for creating the initials and the random color. This doesn't allow a colour to be used more than once on an initial. each initial has it's only specific color.
+//////////////////////////////////////////////////////////////////////
+//Alternative method 
 
-// String.prototype.hashCode = function() {
-// 			var hash = 0,
-// 						i, chr, len;
-// 			if (this.length == 0) return hash;
-// 			for (i = 0, len = this.length; i < len; i++) {
-// 						chr = this.charCodeAt(i);
-// 						hash = ((hash << 5) - hash) + chr;
-// 						hash |= 0; // Convert to 32bit integer
-// 			}
-// 			return hash;
-// };
-//
-// String.prototype.getInitials = function(content) {
-// 			if (typeof content == "undefined") {
-// 						var content = true;
-// 			}
-// 			var initials = this.replace(/[^a-zA-Z- ]/g, "").match(/\b\w/g);
-// 			if (content) {
-// 						return initials.join('').substring(0, 2);
-// 			}
-// 			return initials.substring(0, 2);
-// };
-//
+
 // function intialsAvatar() { //Declare function
-//
-//   var initials = $(profileInput).val().getInitials(), // Get the initials value in the input
-//       coloursIndex = Math.floor(Math.abs($(profileInput).val().hashCode())%colours.length); // Get a random color from the color set
-//
+
+//   var profileNameVal = $(profileInput).val(), // Get the value in the input
+//       initials,
+//       coloursIndex = Math.floor(Math.random()*colours.length); // Get a random color from the color set
+
+//   if((/ /).test(profileNameVal)) // check if there are two names e.g "Dante Lex"
+//   {
+//    profileNameVal = profileNameVal.split(" "); //Split the names into an array
+//    initials = profileNameVal[0].charAt(0).toUpperCase() + profileNameVal[1].charAt(0).toUpperCase(); // Get the first letter of the first name in the first array and the first lettter of the first name in the second array
+//   }
+//   else {
+//    initials = profileNameVal.charAt(0).toUpperCase() // Get the first letter of the name if it's only one name
+//   }
+
 //   $(profileImgContainer).addClass('hide'); //Hide the image
 //   $(profileTextContainer).removeClass('hide').text(initials); //Show the initials
 //   $(profile).css('background-color', colours[coloursIndex]); //Change the background-color
+
 // }

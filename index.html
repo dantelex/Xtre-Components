@@ -1,43 +1,79 @@
 <!doctype html>
 <html>
   <head>
-    <title>Test</title>
-    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <title>Avatar Initials</title>
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <link rel="stylesheet" type="text/css" href="css/placeholderavatar.css" />
   </head>
   <body>
 
   <div class="wrapper js-wrapper">
-
-    <div class="profile js-profile">
-     <div class="text js-initials hide"></div>
-     <div class="image js-image-container">
-      <img src="img/profile.jpg" alt="" class="profile-image js-image" data-name="">
-     </div>
+    <h1>Include in your page</h1>
+    <p>Dependency:<code>'jquery.min.js'</code></p>
+    <p>Unminified:<code>'placeholderavatar.css, app.init.js, app.placeholderavatar.js'</code></p>
+    <p>Minified:<code>'placeholderavatar.css, app.min.js'</code></p>
+    <h2>Initialize</h2>
+    <p>
+      <code>
+        $(function(){
+          app.init({
+          });
+        });
+      </code>
+    </p>
+		
+    
+    <h3>Usage</h3>
+    
+    <p>Add: <code>data-xt-placeholder-avatar='name goes here'</code></p>
+		<div class="profile js-profile" data-xt-placeholder-avatar="Lex">
     </div>
 
+    <p>Change text size: <code>data-xt-avatar-size='medium, large or small'</code></p>
+		<div class="profile js-profile" data-xt-placeholder-avatar="Dante Lex" data-xt-avatar-size="medium">
+    </div>
 
-    <form action="">
-      <div class="profile-input">
-       <input type="text" name="profilename" class="js-input" placeholder="e.g dante lex or dante" required><div class="profile-feedback js-feedback"></div>
-      </div>
+    <p>Use background image: <code>data-xt-background-uimage='path to image'</code></p>
+    <div class="profile js-profile" data-xt-placeholder-avatar data-xt-background-uimage="img/profile.jpg">
+    </div>
 
-      <div class="profile-button">
-       <button type="button" name="button" class="js-submit">Submit</button>
-      </div>
-    </form>
+    <p>Default state with no name: <code>data-xt-placeholder-avatar=''</code></p>
+		<div class="profile js-profile" data-xt-placeholder-avatar>
+    </div>
+
+    <p>Use image: <code>data-xt-uimage='path to image'</code></p>
+		<div class="profile js-profile" data-xt-placeholder-avatar data-xt-uimage="img/profile.jpg">
+    </div>
 
     <footer class="profile-footer">
      <p>Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a></p>
     </footer>
 
-   </div>
+    <h4>Options</h4>
+    <p>If you want colors to be handled from stylesheet</p>
+    <p>
+      <code>
+        $(function(){
+          app.init({
+            placeholderAvatar: {
+              useColorClasses: true
+            }
+          });
+        });
+      </code>
+    </p>
 
-  <div class="sidebar-wrapper js-sidebar-wrapper">
   </div>
 
 
-
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+    <script src="min/app.min.js"></script>
+    <script>
+			$(function(){
+				app.init({
+				});
+			});
+		</script>
   </body>
 </html>

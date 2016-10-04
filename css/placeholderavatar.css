@@ -1,0 +1,62 @@
+.user-initials-wrapper {
+	position: relative;
+	padding-bottom: 100%;
+	background-color: #f2f6f7;
+	border-radius: inherit;
+	color: #f2f6f7;
+	font-size: 12px;
+	text-align: center;
+}
+
+.user-initials {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	line-height: 1;
+}
+
+/*image tag*/
+.user-initials-wrapper img {
+	display: inherit;
+	border-radius: inherit;
+	height: 60px;
+	max-width: 100%;
+}
+
+.user-initials-wrapper.pb-0 {
+	padding-bottom: 0;
+}
+
+/*background image*/
+.user-initials-wrapper.bimage {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+/*empty state*/
+.user-initials.icon-user {
+	background: url(../img/user-small.png);
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*Modifying text size*/
+.user-initials-wrapper.avatar-small {
+	font-size: 12px;
+}
+.user-initials-wrapper.avatar-medium {
+	font-size: 24px;
+}
+.user-initials-wrapper.avatar-large {
+	font-size: 45px;
+}
+
+/*Modifying background-color*/
+.user-initials-wrapper.color-g{background-color:#f2f6f7}.user-initials-wrapper.color-0{background:#FF2800}.user-initials-wrapper.color-1{background:#ff3e1a}.user-initials-wrapper.color-2{background:#00A0B2}.user-initials-wrapper.color-3{background:#00bed3}.user-initials-wrapper.color-4{background:#FFF500}.user-initials-wrapper.color-5{background:#fff61a}.user-initials-wrapper.color-6{background:#24A597}.user-initials-wrapper.color-7{background:#2abeae}.user-initials-wrapper.color-8{background:#DE0052}.user-initials-wrapper.color-9{background:#fb005d}.user-initials-wrapper.color-10{background:#7B07A9}.user-initials-wrapper.color-11{background:#9208c9}.user-initials-wrapper.color-12{background:#ff6d00}.user-initials-wrapper.color-13{background:#ff7c1a}.user-initials-wrapper.color-14{background:#9c0}.user-initials-wrapper.color-15{background:#b0eb00}.user-initials-wrapper.color-16{background:#00BF32}.user-initials-wrapper.color-17{background:#00df3a}.user-initials-wrapper.color-18{background:orange}.user-initials-wrapper.color-19{background:#ffae1a}.user-initials-wrapper.color-10{background:#FF4637}.user-initials-wrapper.color-21{background:#ff594b}.user-initials-wrapper.color-22{background:#4212AF}.user-initials-wrapper.color-23{background:#4d15cc}

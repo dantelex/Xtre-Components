@@ -8,26 +8,30 @@ body {
 }
 
   .wrapper {
-    background-color: #134E5E;
-    /*margin: 0 auto 0 auto;*/
-    position: relative;
+    background-color: #fff;
+    margin: 0 auto 0 auto;
+    /*position: relative;*/
     text-align: center;
     color: #111;
-    height: 320px;
-    width: 380px;
-    border-radius: 5px;
-    padding-top: 70px;
-    position: fixed;
+    /*height: 320px;*/
+    width: 650px;
+    border-radius: 4px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 1px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+    /*position: fixed;
     top: 50%;
-    left: 45%;
+    left: 50%;*/
     /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+    /*transform: translate(-50%, -50%);*/
 
   }
 
   .profile {
-   height: 100px;
-   width: 100px;
+   /*display: inline-block;*/
+   height: 60px;
+   width: 60px;
    background-color: #fff;
    margin: auto;
    border-radius: 50%;

@@ -92,7 +92,7 @@ $(function(){
 });
 ```
 You can check it out here - 
-[avata-initials](http://github.com)
+[avata-initials](http://dantelex.github.io/avatar-Initials/)
 
 <footer class="profile-footer">
 	<p>Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a></p>

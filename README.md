@@ -3,9 +3,9 @@ Little standalone components to make your projects easier. Easy to use, customiz
 Please feel free to expand and improve.
 
 ###### Includes
-Avatar Initials
-Countdown Timer
-See More
+1. __Avatar Initials:__ Use images or user initals.
+2. __Countdown Timer:__ Set a timer.
+3. __See More:__ click to view more content.
 
 ## Include in your page
 ###### Dependency

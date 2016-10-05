@@ -12,5 +12,5 @@ js/app.txt
 js/napp.txt
 css/alert.css
 img/warning.png
-test.txt
-data
+*.txt
+data/data.json

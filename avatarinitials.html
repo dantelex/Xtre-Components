@@ -24,40 +24,63 @@
 
 
     <h3>Usage</h3>
+		<div class="placeholder">
+			<div class="colored">
+				<p>Add: <code>data-xt-placeholder-avatar='name goes here'</code></p>
+				<div class="profile js-profile" data-xt-placeholder-avatar="Lex">
+				</div>
+			</div>
+		</div>
 
-    <p>Add: <code>data-xt-placeholder-avatar='name goes here'</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar="Lex">
-    </div>
+		<div class="placeholder">
+			<div class="colored">
+				<p>Change text size: <code>data-xt-avatar-size='medium, large or small'</code></p>
+				<div class="profile js-profile" data-xt-placeholder-avatar="Dante Lex" data-xt-avatar-size="medium">
+				</div>
+			</div>
+		</div>
 
-    <p>Change text size: <code>data-xt-avatar-size='medium, large or small'</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar="Dante Lex" data-xt-avatar-size="medium">
-    </div>
+		<div class="placeholder">
+			<div class="colored">
+				<p>Use background image: <code>data-xt-background-uimage='path to image'</code></p>
+				<div class="profile js-profile" data-xt-placeholder-avatar data-xt-background-uimage="img/profile.jpg">
+				</div>
+			</div>
+		</div>
 
-    <p>Use background image: <code>data-xt-background-uimage='path to image'</code></p>
-    <div class="profile js-profile" data-xt-placeholder-avatar data-xt-background-uimage="img/profile.jpg">
-    </div>
+		<div class="placeholder">
+			<div class="colored">
+				<p>Default state with no name, change icon in style: <code>data-xt-placeholder-avatar</code></p>
+				<div class="profile js-profile" data-xt-placeholder-avatar>
+				</div>
+			</div>
+		</div>
 
-    <p>Default state with no name, change icon in style: <code>data-xt-placeholder-avatar</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar>
-    </div>
-
-    <p>Use image: <code>data-xt-uimage='path to image'</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar data-xt-uimage="img/profile.jpg">
-    </div>
+		<div class="placeholder">
+			<div class="colored">
+				<p>Use image: <code>data-xt-uimage='path to image'</code></p>
+				<div class="profile js-profile" data-xt-placeholder-avatar data-xt-uimage="img/profile.jpg">
+				</div>
+			</div>
+		</div>
 
     <h4>Options</h4>
-    <p>If you want colors to be handled from stylesheet</p>
-    <p class="pb-30">
-      <code>
-        $(function(){
-          app.init({
-            placeholderAvatar: {
-              useColorClasses: true
-            }
-          });
-        });
-      </code>
-    </p>
+		<div class="placeholder">
+			<div class="colored">
+				<p>If you want colors to be handled from stylesheet</p>
+				<p class="pb-30">
+					<code>
+						$(function(){
+							app.init({
+								placeholderAvatar: {
+									useColorClasses: true
+								}
+							});
+						});
+					</code>
+				</p>
+			</div>
+		</div>
 
     <footer class="profile-footer">
      <p>

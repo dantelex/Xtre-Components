@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Social Share</title>
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+		<link rel="stylesheet" type="text/css" href="css/socialshare.css" />
+  </head>
+  <body>
+
+  <div class="wrapper js-wrapper">
+		<h1>Include in your page</h1>
+		<p>Dependency:<code>'jquery.min.js'</code></p>
+		<p>Unminified:<code>'socialshare.css, app.init.js, app.socialshare.js'</code></p>
+		<p>Minified:<code>'socialshare.css, app.socialshare.min.js'</code></p>
+		<h2>Initialize</h2>
+		<p>
+			<code>
+				$(function(){
+					app.init({
+					});
+				});
+			</code>
+		</p>
+
+
+		<h3>Usage</h3>
+		<div class="social-share">
+			<div class="colored">
+				<p>Add: <code>data-xt-social="facebook"</code></p>
+				<p>Options: <code>data-xt-simage="http://placekitten.com/500/500"</code> <code>data-xt-sname="Xtre Component for the little things"</code> <code>data-xt-surl="http://dantelex.github.io/Xtre-Components/"</code> <code>data-xt-stitle="Xtre Components" data-xt-ssummary="me"</code></p>
+				<a href="#" class="fb" data-xt-social="facebook" data-xt-simage="http://placekitten.com/500/500" data-xt-sname="Xtre Component for the little things" data-xt-surl="http://dantelex.github.io/Xtre-Components/" data-xt-stitle="Xtre Components" data-xt-ssummary="me">Facebook</a>
+			</div>
+			<div class="colored">
+				<p>Add: <code>data-xt-social="twitter"</code></p>
+				<p>Options: <code>data-xt-surl="http://dantelex.github.io/Xtre-Components/"</code> <code>data-xt-stitle="Xtre Components"</code></p>
+				<a href="#" class="tw" data-xt-social="twitter" data-xt-surl="http://dantelex.github.io/Xtre-Components/" data-xt-stitle="Xtre Components">Twitter</a>
+			</div>
+			<div class="colored">
+				<p>Add: <code>data-xt-social="goopleplus"</code></p>
+				<p>Options: <code>data-xt-surl="http://dantelex.github.io/Xtre-Components/"</code> <code>data-xt-stitle="Xtre Components"</code></p>
+				<a href="#" class="gp" data-xt-social="goopleplus" data-xt-surl="http://dantelex.github.io/Xtre-Components/" data-xt-stitle="Xtre Components">Google +</a>
+			</div>
+			<div class="colored">
+				<p>Add: <code>data-xt-social="linkedin"</code></p>
+				<p>Options: <code>data-xt-surl="http://dantelex.github.io/Xtre-Components/"</code> <code>data-xt-stitle="Xtre Components"</code> <code>data-xt-ssummary="me"</code></p>
+				<a href="#" class="ld" data-xt-social="linkedin" data-xt-surl="http://dantelex.github.io/Xtre-Components/" data-xt-stitle="Xtre Components" data-xt-ssummary="me">Linkedin</a>
+			</div>
+			<p>Note: It uses the options and apis avaliable from the social networks</p>
+		</div>
+		<footer class="profile-footer">
+     <p>
+       Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a>
+       <a href="http://dantelex.github.io/Xtre-Components/" class="github">View on Github</a>
+     </p>
+    </footer>
+  </div>
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     <!--<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>-->
+    <script src="js/app.init.js"></script>
+		<script src="js/app.socialshare.js"></script>
+
+
+    <script>
+			$(document).ready(function(){
+				app.init({
+					socialShare: {
+						api: '699173753481084'
+					}
+				});
+			});
+		</script>
+  </body>
+</html>

@@ -13,7 +13,8 @@
 	window.app.comps.placeholderAvatar = {
 		config: {
 			placeholderAvatar: {
-				useColorClasses: false
+				useColorClasses: false,
+				colorUrl: 'data/data.json'
 			}
 		},
 		init:function(){
@@ -38,10 +39,17 @@
 					opts.$container.each(function(index, elem){
 						var $el = $(elem), //The current element
 						numColors = 24,
-						color;
+						colors;
 
 						// Colors set
 						if(opts.useColorClasses === false){
+							// $.getJSON(opts.colorUrl, function(data){
+							// 	var colorList = data;
+							// 	for (var i = 0; i < colorList.length; i++) {
+							// 		colors = colorList[i][coloursIndex];
+							// 		self.log(colors);
+							// 	}
+							// });
 							colors = ["#FF2800", "#ff3e1a", "#00A0B2", "#00bed3", "#FFF500", "#fff61a", "#24A597", "#2abeae", "#DE0052", "#fb005d", "#7B07A9", "#9208c9", "#ff6d00", "#ff7c1a", "#9c0", "#b0eb00", "#00BF32", "#00df3a", "orange", "#ffae1a", "#FF4637", "#ff594b", "#4212AF", "#4d15cc"];
 						}
 						else {
@@ -69,7 +77,7 @@
 						}
 
 						if(placeholderAvatar) {
-							$el.prepend($uInitialsContent); 
+							$el.prepend($uInitialsContent);
 							if(opts.useColorClasses === false){
 								$el.find(opts.intitalsWrapper).css('background-color', colors[coloursIndex]); //Change the background-color
 							}
@@ -103,12 +111,12 @@
 						else {
 							$el.prepend($uInitialsContent); //Add the html content
 							if(opts.useColorClasses === false){
-								$el.find(opts.intitalsWrapper).css('background-color', "#f2f6f7"); 
+								$el.find(opts.intitalsWrapper).css('background-color', "#f2f6f7");
 							}
 							else {
 								$el.find(opts.intitalsWrapper).removeClass(colors).addClass('color-g'); //Change the background-color
 							}
-							
+
 							$el.find(opts.intitals).addClass('icon-user'); //Show the initials
 						}
 

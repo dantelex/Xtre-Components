@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>See More</title>
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+		<link rel="stylesheet" type="text/css" href="css/seemore.css" />
+  </head>
+  <body>
+
+  <div class="wrapper js-wrapper">
+		<h1>Include in your page</h1>
+		<p>Dependency:<code>'jquery.min.js'</code></p>
+		<p>Unminified:<code>'seemore.css, app.init.js, app.seemore.js'</code></p>
+		<p>Minified:<code>'seemore.css, app.seemore.min.js'</code></p>
+		<h2>Initialize</h2>
+		<p>
+			<code>
+				$(function(){
+					app.init({
+					});
+				});
+			</code>
+		</p>
+
+
+		<h3>Usage</h3>
+		<p>Add with a count: <code> data-xt-seemore="300"</code></p>
+		<div class="see-more" data-xt-seemore="300">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<footer class="profile-footer">
+     <p>
+       Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a>
+       <a href="http://dantelex.github.io/Xtre-Components/" class="github">View on Github</a>
+     </p>
+    </footer>
+  </div>
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+    <!--<script src="js/app.init.js"></script>
+		<script src="js/app.seemore.js"></script>-->
+		<script src="min/js/app.seemore.min.js"></script>
+    <script>
+			$(function(){
+				app.init({});
+			});
+		</script>
+  </body>
+</html>

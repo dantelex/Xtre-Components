@@ -1,79 +1,172 @@
 <!doctype html>
 <html>
   <head>
-    <title>Avatar Initials</title>
-    <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <title>Xtre Components</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<link rel="stylesheet" type="text/css" href="css/accordion.css" />
     <link rel="stylesheet" type="text/css" href="css/placeholderavatar.css" />
+		<link rel="stylesheet" type="text/css" href="css/seemore.css" />
+		<link rel="stylesheet" type="text/css" href="css/countdowntimer.css" />-->
+
+		<link rel="stylesheet" type="text/css" href="min/css/style.min.css" />
   </head>
   <body>
 
   <div class="wrapper js-wrapper">
-    <h1>Include in your page</h1>
-    <p>Dependency:<code>'jquery.min.js'</code></p>
-    <p>Unminified:<code>'placeholderavatar.css, app.init.js, app.placeholderavatar.js'</code></p>
-    <p>Minified:<code>'placeholderavatar.css, app.min.js'</code></p>
-    <h2>Initialize</h2>
-    <p>
-      <code>
-        $(function(){
-          app.init({
-          });
-        });
-      </code>
-    </p>
-		
-    
-    <h3>Usage</h3>
-    
-    <p>Add: <code>data-xt-placeholder-avatar='name goes here'</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar="Lex">
-    </div>
+    <div class="wrapper-header">
+			<h2>Xtre Components</h2>
+			<p>Little components to use in your project, easy to initalize and customize.</p>
+			<p class="second">Little things matter :)</p>
+		</div>
 
-    <p>Change text size: <code>data-xt-avatar-size='medium, large or small'</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar="Dante Lex" data-xt-avatar-size="medium">
-    </div>
+		<button class="accordion" data-xt-accordion>Avatar Initials Component</button>
+		<div class="panel">
 
-    <p>Use background image: <code>data-xt-background-uimage='path to image'</code></p>
-    <div class="profile js-profile" data-xt-placeholder-avatar data-xt-background-uimage="img/profile.jpg">
-    </div>
+			<h1>Include in your page</h1>
+			<p>Dependency:<code>'jquery.min.js'</code></p>
+			<p>Unminified:<code>'placeholderavatar.css, app.init.js, app.placeholderavatar.js'</code></p>
+			<p>Minified:<code>'placeholderavatar.css, app.placeholderavatar.min.js'</code></p>
+			<h2>Initialize</h2>
+			<p>
+				<code>
+					$(function(){
+						app.init({
+						});
+					});
+				</code>
+			</p>
 
-    <p>Default state with no name: <code>data-xt-placeholder-avatar=''</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar>
-    </div>
 
-    <p>Use image: <code>data-xt-uimage='path to image'</code></p>
-		<div class="profile js-profile" data-xt-placeholder-avatar data-xt-uimage="img/profile.jpg">
-    </div>
+			<h3>Usage</h3>
+
+			<p>Add: <code>data-xt-placeholder-avatar='name goes here'</code></p>
+			<div class="profile js-profile" data-xt-placeholder-avatar="Lex">
+			</div>
+
+			<p>Change text size: <code>data-xt-avatar-size='medium, large or small'</code></p>
+			<div class="profile js-profile" data-xt-placeholder-avatar="Dante Lex" data-xt-avatar-size="medium">
+			</div>
+
+			<p>Use background image: <code>data-xt-background-uimage='path to image'</code></p>
+			<div class="profile js-profile" data-xt-placeholder-avatar data-xt-background-uimage="img/profile.jpg">
+			</div>
+
+			<p>Default state with no name, change icon in style: <code>data-xt-placeholder-avatar</code></p>
+			<div class="profile js-profile" data-xt-placeholder-avatar>
+			</div>
+
+			<p>Use image: <code>data-xt-uimage='path to image'</code></p>
+			<div class="profile js-profile" data-xt-placeholder-avatar data-xt-uimage="img/profile.jpg">
+			</div>
+
+			<h4>Options</h4>
+			<p>If you want colors to be handled from stylesheet</p>
+			<p class="pb-30">
+				<code>
+					$(function(){
+						app.init({
+							placeholderAvatar: {
+								useColorClasses: true
+							}
+						});
+					});
+				</code>
+			</p>
+
+		</div>
+
+		<button class="accordion" data-xt-accordion>Countdown Timer Component</button>
+		<div class="panel">
+			<h1>Include in your page</h1>
+			<p>Dependency:<code>'jquery.min.js'</code></p>
+			<p>Unminified:<code>'countdowntimer.css, app.init.js, app.countdowntimer.js'</code></p>
+			<p>Minified:<code>'countdowntimer.css, app.countdowntimer.min.js'</code></p>
+			<h2>Initialize</h2>
+			<p>
+				<code>
+					$(function(){
+						app.init({
+						});
+					});
+				</code>
+			</p>
+
+
+			<h3>Usage</h3>
+			<div class="countdowntimer">
+				<p>Add: <code>data-xt-countdowntimer</code></p>
+				<p>To add schedule dates: <code>data-xt-schedule="October 5 2016, October 15 2016"</code></p>
+				<div class="countdown-timer js-countdown-timer-none" data-xt-schedule="October 5 2016, November 15 2016" data-xt-countdowntimer>
+					<span class="js-days">02</span><span class="countdown-count">day</span>
+					<span class="js-hours">16</span><span class="countdown-count">hr</span>
+					<span class="js-minutes">12</span><span class="countdown-count">min</span>
+					<span class="js-seconds">13</span><span class="countdown-count">sec</span>
+				</div>
+				<p>To add in secs: <code>data-xt-endsec="30"</code></p>
+				<div class="countdown-timer js-countdown-timer-none" data-xt-endsec="30" data-xt-countdowntimer>
+					<span class="js-days">02</span><span class="countdown-count">day</span>
+					<span class="js-hours">16</span><span class="countdown-count">hr</span>
+					<span class="js-minutes">12</span><span class="countdown-count">min</span>
+					<span class="js-seconds">13</span><span class="countdown-count">sec</span>
+				</div>
+				<p>To add in days: <code>data-xt-endday="October 13 2016 15:39 GMT+0100"</code></p>
+				<p>"15:39 GMT+0100" is so it will start from your GMT, you can set</p>
+				<div class="countdown-timer js-countdown-timer-none" data-xt-endday="December 13 2016 15:39 GMT+0100" data-xt-countdowntimer>
+					<span class="js-days">02</span><span class="countdown-count">day</span>
+					<span class="js-hours">16</span><span class="countdown-count">hr</span>
+					<span class="js-minutes">12</span><span class="countdown-count">min</span>
+					<span class="js-seconds">13</span><span class="countdown-count">sec</span>
+				</div>
+			</div>
+		</div>
+
+		<button class="accordion" data-xt-accordion>See More Component</button>
+		<div class="panel">
+			<h1>Include in your page</h1>
+			<p>Dependency:<code>'jquery.min.js'</code></p>
+			<p>Unminified:<code>'seemore.css, app.init.js, app.seemore.js'</code></p>
+			<p>Minified:<code>'seemore.css, app.seemore.min.js'</code></p>
+			<h2>Initialize</h2>
+			<p>
+				<code>
+					$(function(){
+						app.init({
+						});
+					});
+				</code>
+			</p>
+
+
+			<h3>Usage</h3>
+			<p>Add with a count: <code> data-xt-seemore="300"</code></p>
+			<div class="see-more" data-xt-seemore="300">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
 
     <footer class="profile-footer">
-     <p>Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a></p>
+     <p>
+       Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a>
+       <a href="http://dantelex.github.io/Xtre-Components/" class="github">View on Github</a>
+     </p>
     </footer>
 
-    <h4>Options</h4>
-    <p>If you want colors to be handled from stylesheet</p>
-    <p>
-      <code>
-        $(function(){
-          app.init({
-            placeholderAvatar: {
-              useColorClasses: true
-            }
-          });
-        });
-      </code>
-    </p>
 
   </div>
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
      <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
-    <script src="min/app.min.js"></script>
+    <script src="min/js/app.min.js"></script>
+
     <script>
 			$(function(){
 				app.init({
 				});
 			});
+		</script>
+		<script>
+
 		</script>
   </body>
 </html>

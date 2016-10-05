@@ -483,7 +483,7 @@
 			log:function(){
 				if(this.config.env == 'development'){
 					var args = [].slice.call(arguments, 0),
-							suffix = Error().lineNumber ? 'line: '  + Error().lineNumber : '::WAF::'; // + Error().stack;
+							suffix = Error().lineNumber ? 'line: '  + Error().lineNumber : '::XTRE::'; // + Error().stack;
 					// console.trace();
 					console.log.apply(console, args.concat([suffix]));
 				}
@@ -611,7 +611,7 @@
 		},
 		addUtility:function(utilName, utilFn){
 			if(this.utils.hasOwnProperty(utilName)){
-				throw new WafException('utility name:' + utilName + ' is already is use.');
+				throw new XtreException('utility name:' + utilName + ' is already is use.');
 			}
 			this.utils[utilName] = utilFn;
 			this[utilName] = utilFn;

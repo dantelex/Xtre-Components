@@ -40,11 +40,14 @@
 
 
 /*empty state*/
-.user-initials.icon-user {
-	background: url(../img/user-small.png);
+.user-initials.icon-user:after {
+	content: '\02795';
+	font-size: 25px;
+	color: #777;
+	/*background: url(../img/user-small.png);
 	height: 55px;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center;*/
 }
 
 /*Modifying text size*/

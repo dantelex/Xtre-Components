@@ -39,21 +39,24 @@
 					opts.$container.each(function(index, elem){
 						var $el = $(elem), //The current element
 						numColors = 24,
-						colors;
+						colors, colorList;
 
 						// Colors set
 						if(opts.useColorClasses === false){
 							// $.getJSON(opts.colorUrl, function(data){
-							// 	var colorList = data;
-							// 	for (var i = 0; i < colorList.length; i++) {
-							// 		colors = colorList[i][coloursIndex];
-							// 		self.log(colors);
-							// 	}
+							// 	colorList = data.slice();
+							// 	self.log(colorList, 'list');
+							// 	// for (var i = 0; i < colorList.length; i++) {
+							// 	// 	colorsL = colorList[i];
+							// 	// 	self.log(colorsL, 'one');
+							// 	// }
 							// });
+							// colors = colorList;
+							// self.log(colors, 'colors');
 							colors = ["#FF2800", "#ff3e1a", "#00A0B2", "#00bed3", "#FFF500", "#fff61a", "#24A597", "#2abeae", "#DE0052", "#fb005d", "#7B07A9", "#9208c9", "#ff6d00", "#ff7c1a", "#9c0", "#b0eb00", "#00BF32", "#00df3a", "orange", "#ffae1a", "#FF4637", "#ff594b", "#4212AF", "#4d15cc"];
 						}
 						else {
-						colors = 'color-0 color-1 color-2 color-3 color-4 color-5 color-6 color-7 color-8 color-9 color-10 color-11 color-12 color-13 color-14 color-15 color-16 color-17 color-18 color-19 color-20 color-21 color-22 color-23';
+							colors = 'color-0 color-1 color-2 color-3 color-4 color-5 color-6 color-7 color-8 color-9 color-10 color-11 color-12 color-13 color-14 color-15 color-16 color-17 color-18 color-19 color-20 color-21 color-22 color-23';
 						}
 
 						placeholderAvatar = $el.attr(self.attr_name('placeholder-avatar')),

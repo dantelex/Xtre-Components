@@ -6,6 +6,7 @@ Please feel free to expand and improve.
 1. __Avatar Initials:__ Use images or user initals.
 2. __Countdown Timer:__ Set a timer.
 3. __See More:__ click to view more content.
+4. __Social Share__ Share to facebook, twitter, google plus and linkedlin with url apis
 
 ## Include in your page
 ###### Dependency

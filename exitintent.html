@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
   <head>
-    <title>See More Component</title>
-		<meta name="keywords" content="view, all, component, javascript, see">
+    <title>Exit Intent Component</title>
+		<meta name="keywords" content="exit, intent, component, javascript">
 		<meta name="description" content="Little standalone components to make your projects easier. Easy to use, customize and a lot of options. Little things matter">
 		<meta name="robots" content="index,follow">
-		<meta name="pagename" content="See more Xtre Components">
+		<meta name="pagename" content="Exit Intent Xtre Components">
 		<meta name="author" content="dante lex, dantelex@gmail.com">
 		<meta name="designer" content="Dante Lex">
 		<meta name="owner" content="Dante Lex">
@@ -14,19 +14,18 @@
 		<meta name="distribution" content="Global">
 		<meta name="rating" content="General">
 		<meta name="revisit-after" content="7 days">
-		<meta name="og:title" content="See More Xtre Components"/>
+		<meta name="og:title" content="Exit Intent Xtre Components"/>
 		<meta name="og:url" content="https://dantelex.github.io/Xtre-Components/"/>
 		<meta name="og:description" content="Little standalone components to make your projects easier. Easy to use, customize and a lot of options. Little things matter"/>
     <link rel="stylesheet" type="text/css" href="css/page.css" />
-		<link rel="stylesheet" type="text/css" href="css/seemore.css" />
   </head>
   <body>
 
   <div class="wrapper js-wrapper">
 		<h1>Include in your page</h1>
 		<p>Dependency:<code>'jquery.min.js'</code></p>
-		<p>Unminified:<code>'seemore.css, app.init.js, app.seemore.js'</code></p>
-		<p>Minified:<code>'seemore.css, app.seemore.min.js'</code></p>
+		<p>Unminified:<code>'app.init.js, app.exitintent.js'</code></p>
+		<p>Minified:<code>'app.exitintent.min.js'</code></p>
 		<h2>Initialize</h2>
 		<p>
 			<code>
@@ -39,14 +38,18 @@
 
 
 		<h3>Usage</h3>
-		<div class="see-more">
+		<div class="exitintent">
 			<div class="colored">
-				<p>Add with a count: <code> data-xt-seemore="300"</code></p>
-				<div class="see-more-inner" data-xt-seemore="300">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<p>Add: <code>data-xt-exitintent</code></p>
+				<div data-xt-exitintent class="plr-80">
+					<p>Try and close or leave the page</p>
+					<div class="exitintent-wrapper hide">
+						You are trying to leave, but why?
+					</div>
 				</div>
 			</div>
 		</div>
+
 		<footer class="profile-footer">
      <p>
        Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a>
@@ -61,8 +64,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
      <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
     <!--<script src="js/app.init.js"></script>
-		<script src="js/app.seemore.js"></script>-->
-		<script src="min/js/app.seemore.min.js"></script>
+		<script src="js/app.exitintent.js"></script>-->
+		<script src="min/js/app.exitintent.min.js"></script>
     <script>
 			$(function(){
 				app.init({});

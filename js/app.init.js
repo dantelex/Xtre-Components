@@ -528,10 +528,10 @@
 				// app.initRoles();
 
 				// Subscriptions
-				this.subscribe('vc:notify', function(e, data){
+				this.subscribe('xt:notify', function(e, data){
 					self.notifyMe(data);
 				});
-				this.subscribe('vc:init', function(e, data){
+				this.subscribe('xt:init', function(e, data){
 					self.init(data);
 				});
 

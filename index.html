@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Xtre Components</title>
-		<meta name="keywords" content="avatar, initials, timer, count, share, view, all, placeholder, component, javascript, see, social">
+		<meta name="keywords" content="avatar, initials, timer, confetti, exit, intent, count, share, view, all, placeholder, component, javascript, see, social">
 		<meta name="description" content="Little standalone components to make your projects easier. Easy to use, customize and a lot of options. Little things matter">
 		<meta name="robots" content="index,follow">
 		<meta name="pagename" content="Xtre Components">
@@ -28,7 +28,7 @@
   </head>
   <body>
 
-  <div class="wrapper js-wrapper">
+  <div class="wrapper js-wrapper color-r">
     <div class="wrapper-header">
 			<h2>Xtre Components</h2>
 			<p>Little components to use in your project, easy to initalize and customize.</p>
@@ -235,6 +235,80 @@
 				<p>Note: It uses the options and apis avaliable from the social networks</p>
 			</div>
 		</div>
+
+		<button class="accordion" data-xt-accordion>Confetti Component</button>
+		<div class="panel">
+			<h1>Include in your page</h1>
+			<p>Dependency:<code>'jquery.min.js'</code></p>
+			<p>Unminified:<code>'app.init.js, app.confetti.js'</code></p>
+			<p>Minified:<code>'app.confetti.min.js'</code></p>
+			<h2>Initialize</h2>
+			<p>
+				<code>
+					$(function(){
+						app.init({
+						});
+					});
+				</code>
+			</p>
+
+
+			<h3>Usage</h3>
+			<div class="confetti">
+				<div class="colored">
+					<p>Add: <code>data-xt-confetti</code></p>
+					<canvas data-xt-confetti></canvas>
+				</div>
+				<div class="colored">
+					<p>If you want change the width, position and z-index</p>
+					<p>
+						<code>
+							$(function(){
+								app.init({
+									confetti: {
+										position: 'static',
+										width: '100%',
+										zIndex: '-1'
+									}
+								});
+							});
+						</code>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<button class="accordion" data-xt-accordion>Exit Intent Component</button>
+		<div class="panel">
+			<h1>Include in your page</h1>
+			<p>Dependency:<code>'jquery.min.js'</code></p>
+			<p>Unminified:<code>'app.init.js, app.exitintent.js'</code></p>
+			<p>Minified:<code>'app.exitintent.min.js'</code></p>
+			<h2>Initialize</h2>
+			<p>
+				<code>
+					$(function(){
+						app.init({
+						});
+					});
+				</code>
+			</p>
+
+
+			<h3>Usage</h3>
+			<div class="exitintent">
+				<div class="colored">
+					<p>Add: <code>data-xt-exitintent</code></p>
+					<div data-xt-exitintent>
+						<p>Try and close or leave the page</p>
+						<div class="exitintent-wrapper hide">
+							You are trying to leave, but why?
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
     <footer class="profile-footer">
      <p>
        Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a>

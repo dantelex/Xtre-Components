@@ -6,7 +6,9 @@ Please feel free to expand and improve.
 1. __Avatar Initials:__ Use images or user initals.
 2. __Countdown Timer:__ Set a timer.
 3. __See More:__ click to view more content.
-4. __Social Share__ Share to facebook, twitter, google plus and linkedlin with url apis
+4. __Social Share__ Share to facebook, twitter, google plus and linkedlin with url apis.
+4. __Confetti__ For a successful transaction.
+4. __Exit Intent__ Show information is a user wants to leave your page.
 
 ## Include in your page
 ###### Dependency
@@ -38,7 +40,7 @@ $(function(){
 <p>Add: <code>data-xt-name_of_component</code></p>
 
 You can check it out here - 
-[xtre-components](http://dantelex.github.io/Xtre-Components/)
+[xtre-components](https://dantelex.github.io/Xtre-Components/)
 
 <footer class="profile-footer">
 	<p>Developed By: <a href="https://twitter.com/Dantelex">@dantelex</a></p>
